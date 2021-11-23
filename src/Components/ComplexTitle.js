@@ -1,18 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ComplexTitle = ({ title }) => {
+const ComplexTitle = ({ title, className }) => {
   return (
-    <div>
-      <StyledComplexTitle>
-        <h1>{title}</h1>
-        <div className='underline'></div>
-      </StyledComplexTitle>
+    <div className={className}>
+      <h1>{title}</h1>
+      <div className='underline'></div>
     </div>
   );
 };
 
-const StyledComplexTitle = styled.div`
+const StyledTitle = styled(ComplexTitle)`
   h1 {
     text-transform: capitalize;
     text-align: center;
@@ -25,4 +23,4 @@ const StyledComplexTitle = styled.div`
   }
 `;
 
-export default ComplexTitle;
+export default StyledTitle;
