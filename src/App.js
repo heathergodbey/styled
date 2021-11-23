@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import StyledTitle from './Components/StyledTitle';
+import { StyledButton, StyledExtendButton } from './Components/StyledButton';
+import { Button } from '@material-ui/core';
+import ComplexTitle from './Components/ComplexTitle';
+
+const StyledBtn = styled(Button)`
+  text-transform: capitalize;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <StyledTitle special>Styled Component</StyledTitle>
+      <StyledTitle>Styled Component</StyledTitle>
+      <StyledButton>Click Me!</StyledButton>
+      <StyledExtendButton>Ext Btn</StyledExtendButton> */}
+      {/* <h1>Material UI</h1>
+      <Button color='primary' variant='contained'>
+        Click Me!
+      </Button>
+      <StyledBtn color='primary' variant='contained'>
+        Click Me!
+      </StyledBtn> */}
+      <ComplexTitle title='More Complex Title' />
     </div>
   );
 }
